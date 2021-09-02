@@ -30,7 +30,7 @@ const displayBookResalt = docs => {
             <div class="card h-100">
                 <img src="${cover}" class="card-img-top" alt="${docs.cover_i}">
                 <div class="card-body">
-                    <h5 class="card-title">${docs.title}</h5>
+                    <h6 class="card-title">${docs.title}</h6>
                 </div>
                     <p class="card-text ">Author: ${docs.author_name}</p>
                     <p class="card-text ">First publish year: ${docs.first_publish_year}</p>
