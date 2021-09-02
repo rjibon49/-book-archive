@@ -1,16 +1,13 @@
 const searchBook = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    // console.log(searchText);
     searchField.value = '';
-    const url = `https://openlibrary.org/search.json?q=${searchText}`
-    // console.log(url);
 
+    const url = `https://openlibrary.org/search.json?q=${searchText}`
 
     fetch(url)
     .then(res => res.json())
     .then(data => displayBookResalt(data.docs));
-
 }
 
 
@@ -20,11 +17,9 @@ const displayBookResalt = docs => {
 
     const result = document.getElementById('result');
     let resultShow = result.innerText;
-    // result.innerText = docs.length;
-    // console.log(resultShow);
 
  if (docs.length === 0) {
-    result.innerText = 'Serch Not Found ';
+    result.innerText = 'Search Not Found ';
  } else{
     result.innerText = 'Search Found ' + docs.length;
     docs.forEach(docs=>{
